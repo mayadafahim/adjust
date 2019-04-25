@@ -141,21 +141,3 @@ class MetricViewSet(viewsets.ModelViewSet):
        
         print(queryset.query)
         return queryset
-
-    # def importcsv():
-    #     import csv, sqlite3
-
-    #     import os
-    #     import datetime
-    #     workpath = os.path.dirname(os.path.abspath(__file__))
-        
-     
-    #     with open(os.path.join(workpath, 'sample_data.csv'), "rt") as fin: 
-    #         dr = csv.DictReader(fin) # comma is default delimiter
-    #         # to_db = [(i['date'], i['channel'], i['country'], i['os'], i['impressions'], i['clicks'], i['installs'], i['spend'], i['revenue']) for i in dr]
-
-    #         for i in dr:
-    #             p = Metric(date= datetime.datetime.strptime(i['date'], '%d.%m.%Y') ,country=i['country'], channel = i['channel'], os= i['os'], impressions = i['impressions'], clicks = i['clicks'], installs = i['installs'], spend =i['spend'], revenue=i['revenue'])
-    #             p.save()
-
-    # importcsv()
